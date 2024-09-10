@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quote Generator</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="parent theme-light-mode">
+    <header class="header">
+      <h4 class="header__logo">QGen</h4>
+
+      <div class="header__dark-mode">
+        <label class="switch">
+          <input
+            type="checkbox"
+            id="light-mode"
+            class="header__dark-mode__toggle"
+          />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </header>
+
+    <main class="quote-generator theme-light-mode">
+      <header class="quote-generator__header">
+        <h1 class="quote-generator__title">Quotes</h1>
+      </header>
+      <div class="quote-generator__category-select">
+        <label class="quote-generator__category-select__label" for="general">
+          <input
+            class="quote-generator__category-select__input"
+            type="radio"
+            id="general"
+            name="category"
+            checked
+            value="general"
+          />General
+        </label>
+        <label class="quote-generator__category-select__label" for="happiness">
+          <input
+            class="quote-generator__category-select__input"
+            type="radio"
+            id="happiness"
+            name="category"
+            value="happiness"
+          />Happiness
+        </label>
+        <label class="quote-generator__category-select__label" for="life">
+          <input
+            class="quote-generator__category-select__input"
+            type="radio"
+            id="life"
+            name="category"
+            value="life"
+          />Life
+        </label>
+      </div>
+      <div class="quote-generator__font-control theme-light-mode">
+        <span
+          class="quote-generator__font-control__button theme-light-mode"
+          id="font-minus"
+        >
+          -
+        </span>
+        <span class="quote-generator__font-control__label">Aa</span>
+        <span
+          class="quote-generator__font-control__button theme-light-mode"
+          id="font-plus"
+        >
+          +
+        </span>
+      </div>
+
+      <article class="quote-generator__quote-block">
+        <h2 class="quote-generator__quote-block__quote">
+          "Quote is Loading..."
+        </h2>
+        <span class="quote-generator__quote-block__author">-Suron</span>
+        <span class="quote-generator__quote-block__category">"Category"</span>
+      </article>
+      <div class="quote-generator__controls">
+        <button
+          class="quote-generator__button quote-generator__button--prev theme-light-mode"
+        >
+          <!-- <svg
+            class="quote-generator__icon quote-generator__icon--prev"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 19.5 8.25 12l7.5-7.5"
+            />
+          </svg> -->
+          <!-- <span class="quote-generator__button-text">Prev</span> -->
+          prev
+        </button>
+
+        <button
+          class="quote-generator__button quote-generator__button--random theme-light-mode"
+        >
+          Random
+          <!-- <span class="quote-generator__button-text">Random</span> -->
+        </button>
+
+        <button
+          class="quote-generator__button quote-generator__button--next theme-light-mode"
+        >
+          Next
+          <!-- <span class="quote-generator__button-text">Next</span> -->
+          <!-- <svg
+            class="quote-generator__icon quote-generator__icon--next"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m8.25 4.5 7.5 7.5-7.5 7.5"
+            />
+          </svg> -->
+        </button>
+      </div>
+    </main>
+  </body>
+  <script src="/index.js"></script>
+</html>
