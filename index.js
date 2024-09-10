@@ -313,12 +313,6 @@ document.querySelector("#light-mode").addEventListener("click", function (e) {
 displayQuote(currentIndex);
 
 document.querySelector("#font-minus").addEventListener("click", function () {
-  const quoteText = document.querySelector(
-    ".quote-generator__quote-block__quote"
-  );
-  const authorText = document.querySelector(
-    ".quote-generator__quote-block__author"
-  );
   let currentFontSize = window.getComputedStyle(quoteText).fontSize;
   currentFontSize = parseFloat(currentFontSize);
 
@@ -329,16 +323,10 @@ document.querySelector("#font-minus").addEventListener("click", function () {
 });
 
 document.querySelector("#font-plus").addEventListener("click", function () {
-  const quoteText = document.querySelector(
-    ".quote-generator__quote-block__quote"
-  );
-  const authorText = document.querySelector(
-    ".quote-generator__quote-block__author"
-  );
   let currentFontSize = window.getComputedStyle(quoteText).fontSize;
   currentFontSize = parseFloat(currentFontSize);
 
-  if (currentFontSize > 10 && currentFontSize < 32) {
+  if (currentFontSize > 1 && currentFontSize < 32) {
     quoteText.style.fontSize = `${currentFontSize + 1}px`;
     authorText.style.fontSize = `${currentFontSize + 1}px`;
   }
