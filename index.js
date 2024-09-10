@@ -216,7 +216,7 @@ const categoryColors = {
   life: "#2ecc71",
 };
 
-const category = ["life", "general", "happiness"];
+// const category = ["life", "general", "happiness", "SDf"];
 
 let currentIndex = 0;
 let currentCategory = "general";
@@ -226,9 +226,6 @@ const quoteText = document.querySelector(
 );
 const authorText = document.querySelector(
   ".quote-generator__quote-block__author"
-);
-const categoryText = document.querySelector(
-  ".quote-generator__quote-block__category"
 );
 
 // Cache buttons and other elements too
@@ -251,7 +248,6 @@ function displayQuote(index) {
   if (filteredQuotes.length > 0) {
     quoteText.textContent = `"${filteredQuotes[index].quote}"`;
     authorText.textContent = `- ${filteredQuotes[index].author}`;
-    categoryText.textContent = `- ${filteredQuotes[index].category}`;
   }
 }
 
@@ -312,7 +308,7 @@ document.querySelector("#light-mode").addEventListener("click", function (e) {
 
 displayQuote(currentIndex);
 
-document.querySelector("#font-minus").addEventListener("click", function () {
+fontMinusButton.addEventListener("click", function () {
   let currentFontSize = window.getComputedStyle(quoteText).fontSize;
   currentFontSize = parseFloat(currentFontSize);
 
@@ -322,7 +318,7 @@ document.querySelector("#font-minus").addEventListener("click", function () {
   }
 });
 
-document.querySelector("#font-plus").addEventListener("click", function () {
+fontPlusButton.addEventListener("click", function () {
   let currentFontSize = window.getComputedStyle(quoteText).fontSize;
   currentFontSize = parseFloat(currentFontSize);
 
