@@ -229,6 +229,7 @@ input:checked + .slider:before {
   gap: 4px;
   align-items: center;
   justify-content: start;
+  cursor: pointer;
 }
 
 .quote-generator__font-control {
